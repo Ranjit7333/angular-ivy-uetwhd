@@ -1,0 +1,44 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<label for="">Qty</label> <br>
+<input type="" name="Unit" #Unit="ngModel"
+[(ngModel)]="ObjPer.Unit"(ngModelChange)="inputChange()"> <br>
+
+<label for="">Rate</label> <br>
+<input type="text" name="Rate" #Rate="ngModel"
+[(ngModel)]="ObjPer.Rate"(ngModelChange)="inputChange()"> <br>
+
+<label for="">GrosAmt</label> <br>
+<input type="text" name="GrosAmt" #GrosAmt="ngModel"
+[(ngModel)]="ObjPer.GrosAmt" disabled> <br> 
+<label for="">Exsis Type</label> <br>
+<select name="Exsis" #Exsis="ngModel" [(ngModel)]="ObjPer.ExsisType"
+(ngModelChange)="SelectChange()" >
+  <option [ngValue]="undefined">Select</option>
+  <option value="%">%</option>
+  <option value="Amount">Amount.............................</option>
+</select> <br>
+
+<label for="">{{lableName}}</label> <br>
+<input type="text" name="Percentage" #Percentage="ngModel"[(ngModel)]="ObjPer.Percentage"(ngModelChange)="inputChange()"> <br>
+<label for="">{{lableName}} Amt</label> <br>
+<input type="text"name="Output" #Output="ngModel"[(ngModel)]="ObjPer.Output" disabled> <br>
+ 
+
+<label for="">Discount Type</label> <br>
+<select name="Discount" #Discount="ngModel" [(ngModel)]="ObjPer.discoutType"
+(ngModelChange)="SelectDiscountChange()" >
+  <option [ngValue]="undefined">Select</option>
+  <option value="%">%</option>
+  <option value="Amount">Amount.............................</option>
+</select> <br> 
+<label for=""> perentage Disc Amt</label> <br>
+<input type="text"name="DiscountAmt" #DiscountAmt="ngModel"[(ngModel)]="ObjPer.discountField"(ngModelChange)="inputChange()">
+<br>
+<label for="">Discount Amt</label> <br>
+<input type="text"name="DiscountAmt" #DiscountAmt="ngModel"[(ngModel)]="ObjPer.discount"> <br>
+<label for="">Taxable Amt</label> <br>
+<input type="text"name="Taxable" #Taxable="ngModel"[(ngModel)]="ObjPer.TaxAmt" disabled> <br>
+
